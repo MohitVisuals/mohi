@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohitvisuals</title>
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script src="../../dist/script.js"></script>
+    <link rel="stylesheet" href="../custom.css">
+</head>
+
+
+
+
+<body class="bg-[url('unsplash.jpg')] bg-black bg-cover" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    <!-- header and nav bar and banner  -->
+    <section class="bg-[url()] h-fit bg-cover bg-no-repeat">
+        <header
+            class="flex justify-between items-center drop-shadow-sm py-4 w-full shadow-md fixed top-0 z-10 bg-[#1E1E1E] ">
+            <div class="w-10/12 m-auto flex justify-between">
+
+                <!-- Logo -->
+                <a href="/" class="text-lg font-bold text-[24px]">
+                    <img class="w-[150px]" src="../../asset/logo.png" alt="">
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="flex md:hidden flex-col items-center align-middle text-white"
+                    @click="openMenu = !openMenu" :aria-expanded="openMenu" aria-controls="mobile-navigation"
+                    aria-label="Navigation Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- <span class="text-xs">Menu</span> -->
+                </button>
+
+                <!-- Main Navigations -->
+                <nav class="hidden md:flex">
+
+                    <ul class="flex flex-row gap-2">
+                        <!-- <li>
+          <a href="#" class="inline-flex py-2 px-3 bg-slate-200 rounded" aria-current="true">Home</a>
+        </li> -->
+                        <li class="flex items-center">
+                            <a href=""
+                                class="inline-flex px-3 font-medium text-white hover:text-[#DE002C] transition duration-500">About</a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="inline-flex px-3 py-2 text-white font-medium hover:text-[#DE002C] transition duration-500">Get
+                                Work</a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="inline-flex px-3 py-2 underline text-white font-medium hover:text-[#DE002C] transition duration-500">
+                                Download CV</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+
+        <!-- Pop Out Navigation -->
+        <nav id="mobile-navigation" class="fixed top-0 right-0 bottom-0 left-0 backdrop-blur-sm z-10"
+            :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+
+            <!-- UL Links -->
+            <ul class="absolute top-0 right-0 bottom-0 w-10/12 py-4 bg-[#1E1E1E] drop-shadow-2xl z-10 transition-all"
+                :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+
+                <li class="border-b border-inherit flex items-center justify-center">
+                    <a href="" class="inline-flex px-3 text-white text-[20px] font-semibold">About</a>
+                </li>
+                <li class="border-b border-inherit flex items-center justify-center">
+                    <a href=""
+                        class="inline-flex px-3 py-2 text-white font-semibold rounded-[5px]  hover:text-white transition duration-500">Work</a>
+                </li>
+                <li class="border-b border-inherit flex items-center justify-center">
+                    <a href=""
+                        class="inline-flex px-3 py-2 text-white font-semibold rounded-[5px]  hover:text-white transition duration-500 underline">Download
+                        CV</a>
+                </li>
+
+
+            </ul>
+
+            <!-- Close Button -->
+            <button class="absolute top-0 right-0 bottom-0 left-0 text-white" @click="openMenu = !openMenu"
+                :aria-expanded="openMenu" aria-controls="mobile-navigation" aria-label="Close Navigation Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-2" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+        </nav>
+        <!-- header and nav bar  -->
+
+
+
+        <!-- hero content and image section start here  -->
+        <div class="flex sm:flex-row flex-col relative top-[100px] w-10/12 m-auto">
+            <div class="sm:w-1/2 w-full text-white mt-16 space-y-6">
+                <h2 x-data="{ text: '', originalText: 'The goal of<br>UI design.' }" x-init="() => {
+            let index = 0;
+            setInterval(() => {
+                text = originalText.slice(0, index);
+                if (index < originalText.length) {
+                    index++;
+                }
+            }, 50);
+        }" x-html="text" class="sm:text-[50px] text-[35px] font-semibold">
+                </h2>
+                <p class="font-medium">is to strike a balance between aesthetics and functionality, ensuring that
+                    the interface not only looks visually pleasing  but also enables users to easily understand and
+                    interact  with the product. UI designers consider various elements, including layout,
+                    typography, color schemes, icons, buttons, and visual hierarchy, to create an engaging and
+                    cohesive user  interface.</p>
+                <button
+                    class="bg-[#DE002C] p-2 px-3 rounded-[5px] font-medium hover:bg-white hover:text-[#DE002C] transition duration-500">See
+                    My Work</button>
+            </div>
+            <div class="sm:w-1/2 w-full mb-28 avatar text-white">
+                <img style="filter: drop-shadow(0px 0px 67px red);" src="../../asset/ui-design.png" alt="">
+            </div>
+        </div>
+        <!-- hero content and image section end here  -->
+    </section>
+    <!-- header and nav bar and banner  -->
+
+
+
+
+
+    <section>
+        <div class="flex flex-col w-full bg-[url(../../asset/seemywork.png)] text-white bg-cover mx-auto space-y-10">
+            <!-- img and content  -->
+            <div class="w-10/12 mx-auto text-white my-10">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="flex-grow lg:w-4/12 p-4">
+                        <img src="../../asset/ui-design-2.png" alt="">
+                    </div>
+                  
+                   
+                    <div class="flex-grow lg:w-2/12 p-4">
+                        <ul class="list-disc space-y-14 px-10 text-[#D9D9D9]">
+                            <li>Wireframing: Creating rough sketches or low-fidelity representations of the interface to define the layout and structure.                            </li>
+                            <li>Handoff: Preparing the final design assets and specifications for developers to implement the design.                            </li>
+                            <li>UI designers often work closely with UX (User Experience) designers to ensure that the interface not only looks good but also aligns with the overall user experience goals of the product. Together, UI and UX design aim to create seamless and satisfying interactions for users.</li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+            <!-- img and content  -->
+
+            <div class="flex flex-wrap w-10/12 mx-auto my-5">
+                <div
+                    class="flex flex-wrap w-full sm:justify-between justify-center sm:p-10 p-5  items-center rounded-[5px] bg-[#1E1E1E] sm:space-y-0 space-y-5">
+                    <h5 class="sm:text-[50px] text-[28px] ">Let’s work together on <br>
+                        your next project</h5>
+                    <button class="bg-[#C31926] p-2 px-5 rounded-[5px]">Contact</button>
+                </div>
+            </div>
+
+
+            <div class="flex w-full justify-between p-5 items-center rounded-[5px] bg-[#1E1E1E] mt-16">
+                <div class="flex flex-nowrap w-10/12 mx-auto items-center justify-between">
+                    <div>
+                        <img class="w-[150px]" src="../../asset/logo.png" alt="">
+                    </div>
+                    <div class="font-medium">
+                        <p><a href="">&#169; shavejCodes 2023</a></p>
+                    </div>
+                    <div>
+                        <ul class="flex space-x-5">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+                                    fill="none">
+                                    <path
+                                        d="M0 22.8486C0 21.952 0 21.0565 0 20.1598C0.0639659 19.6346 0.120076 19.1072 0.195264 18.5831C0.803501 14.3322 2.48906 10.5593 5.34732 7.35095C9.50623 2.68256 14.7346 0.21258 20.9887 0.0117046C25.0567 -0.118472 28.8935 0.835405 32.3645 2.96311C39.0427 7.05805 42.6405 13.0529 42.9963 20.8926C43.1837 25.0156 42.1614 28.8929 40.0157 32.4244C36.6109 38.0265 31.6721 41.4638 25.2149 42.6814C24.435 42.8284 23.6416 42.9025 22.8549 43.0114C21.9582 43.0114 21.0627 43.0114 20.1661 43.0114C19.6409 42.9463 19.1157 42.8902 18.5916 42.815C14.3115 42.2022 10.5286 40.4875 7.29548 37.6158C3.56077 34.2985 1.2277 30.1733 0.33554 25.2513C0.190775 24.4568 0.109976 23.6499 0 22.8486ZM8.77006 13.4748C8.77006 18.7526 8.77006 24.0045 8.77006 29.2968C8.96308 29.2968 9.12804 29.2968 9.29301 29.2968C11.7989 29.2968 14.3048 29.3047 16.8107 29.2901C17.3112 29.2867 17.8207 29.243 18.3099 29.1375C20.1515 28.7402 21.4723 27.7493 21.8898 25.8158C22.0839 24.9169 22.0705 24.009 21.8516 23.1101C21.5419 21.8398 20.8675 20.9285 19.4916 20.703C19.4759 20.7007 19.4669 20.6592 19.4456 20.6188C20.1997 20.3809 20.7923 19.9421 21.1458 19.2228C21.9538 17.5743 21.2759 15.1761 19.7284 14.1886C18.8598 13.6342 17.8936 13.458 16.8847 13.4569C14.3227 13.4535 11.7607 13.4558 9.19874 13.4569C9.06183 13.4569 8.92492 13.4681 8.77006 13.4748ZM26.0655 24.3558C28.7936 24.3558 31.4914 24.3558 34.2173 24.3558C34.3463 23.476 34.2745 22.6298 34.105 21.7938C33.682 19.7065 32.5755 18.1982 30.4152 17.691C29.743 17.5327 29.027 17.4811 28.3358 17.5047C25.8052 17.5889 23.967 18.8906 23.1388 21.1238C22.7236 22.2415 22.5631 23.3907 22.6832 24.5847C22.9245 26.9817 24.3912 28.784 26.6367 29.3675C27.7455 29.656 28.8789 29.702 30.0112 29.5482C31.019 29.4113 31.9829 29.1229 32.7898 28.4642C33.7437 27.6865 34.1421 26.6641 34.1219 25.4062C33.6303 25.4062 33.1848 25.4062 32.7393 25.4062C32.2837 25.4062 31.8269 25.4062 31.3826 25.4062C31.1592 26.9211 29.6521 27.2342 28.3571 27.0827C26.8298 26.9043 25.9634 25.8584 26.0655 24.3558ZM25.3406 14.404C25.3406 15.065 25.3406 15.6833 25.3406 16.3163C27.521 16.3163 29.6689 16.3163 31.818 16.3163C31.818 15.6665 31.818 15.0448 31.818 14.404C29.6544 14.404 27.5177 14.404 25.3406 14.404Z"
+                                        fill="#C31926" />
+                                    <path
+                                        d="M12.3892 26.443C12.3892 25.0336 12.3892 23.669 12.3892 22.2505C12.6832 22.2505 12.9581 22.2505 13.2331 22.2505C14.4349 22.2505 15.638 22.2471 16.8398 22.2516C17.7152 22.255 18.3616 22.7207 18.5332 23.5758C18.6298 24.0572 18.6376 24.5791 18.5692 25.0661C18.4558 25.8696 17.9531 26.3948 17.1484 26.4262C15.5751 26.4857 13.9962 26.443 12.3892 26.443Z"
+                                        fill="#C31926" />
+                                    <path
+                                        d="M12.396 16.2814C13.0435 16.2814 13.6708 16.2814 14.297 16.2814C15.1095 16.2814 15.9209 16.2803 16.7333 16.2814C17.4807 16.2825 17.9442 16.6281 18.0385 17.3598C18.0979 17.8233 18.0845 18.3137 18.0037 18.7749C17.878 19.4931 17.52 19.7726 16.785 19.8029C16.17 19.8276 15.5528 19.813 14.9378 19.8141C14.1006 19.8152 13.2635 19.8141 12.396 19.8141C12.396 18.638 12.396 17.4979 12.396 16.2814Z"
+                                        fill="#C31926" />
+                                    <path
+                                        d="M31.149 22.227C29.4545 22.227 27.7577 22.227 26.0598 22.227C26.0834 20.822 27.439 19.7368 29.0426 19.821C30.3107 19.8872 31.25 20.9499 31.149 22.227Z"
+                                        fill="#C31926" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44"
+                                    fill="none">
+                                    <path
+                                        d="M42.9998 20.1619C42.9998 21.0583 42.9998 21.9548 42.9998 22.8512C42.9653 23.1273 42.9266 23.4025 42.8971 23.6786C42.4367 27.9335 40.8955 31.7499 38.1801 35.0596C34.8039 39.1748 30.4842 41.7303 25.2377 42.6848C24.4431 42.8296 23.6367 42.9087 22.8363 43.0181C21.9398 43.0181 21.0442 43.0181 20.1478 43.0181C20.04 42.9945 19.934 42.9575 19.8254 42.9491C15.1286 42.5669 10.957 40.8793 7.43268 37.7539C1.91517 32.861 -0.537622 26.6819 0.102932 19.3437C0.503593 14.7605 2.3032 10.7144 5.37382 7.28516C9.56898 2.60096 14.8407 0.159952 21.1309 0.00675796C25.1998 -0.0925657 29.0179 0.902354 32.49 3.03108C38.0521 6.44091 41.4695 11.3658 42.6698 17.7983C42.8146 18.5794 42.8912 19.374 42.9998 20.1619ZM34.1061 32.4999C34.1137 32.3408 34.1238 32.2179 34.1238 32.0942C34.1246 29.2525 34.1305 26.41 34.1188 23.5683C34.1162 22.9682 34.0767 22.3647 34.0034 21.7687C33.6255 18.6998 31.788 16.7714 28.8302 16.4297C26.7074 16.1839 24.9035 16.8202 23.6207 18.6291C23.5686 18.7023 23.5054 18.7671 23.3699 18.9262C23.3699 18.1417 23.3699 17.465 23.3699 16.7739C21.6014 16.7739 19.8877 16.7739 18.1647 16.7739C18.1647 22.0305 18.1647 27.2576 18.1647 32.4898C19.9079 32.4898 21.6225 32.4898 23.3758 32.4898C23.3758 32.2996 23.3758 32.1346 23.3758 31.9696C23.3758 29.8695 23.3733 27.7694 23.3775 25.6693C23.3792 24.8436 23.3766 24.017 23.4112 23.1921C23.4516 22.2435 23.9305 21.5154 24.6897 20.9859C26.199 19.9329 28.1526 20.6021 28.6526 22.3647C28.8176 22.9472 28.8731 23.5768 28.879 24.1862C28.9026 26.8039 28.8891 29.4217 28.8891 32.0403C28.8891 32.1885 28.8891 32.3374 28.8891 32.4991C30.6475 32.4999 32.3511 32.4999 34.1061 32.4999ZM10.0294 16.7445C10.0294 22.0372 10.0294 27.2652 10.0294 32.4864C11.7777 32.4864 13.4931 32.4864 15.2473 32.4864C15.2473 32.2954 15.2473 32.1295 15.2473 31.9637C15.2473 27.2585 15.2473 22.5541 15.2473 17.8488C15.2473 17.6106 15.2279 17.3707 15.2515 17.135C15.2843 16.8118 15.1505 16.7344 14.8441 16.7369C13.4721 16.7512 12.1 16.7436 10.728 16.7436C10.5075 16.7445 10.2853 16.7445 10.0294 16.7445ZM12.4712 9.15379C11.5218 9.1883 10.537 9.55698 9.97974 10.6563C9.26259 12.0704 9.89473 13.7547 11.3484 14.3632C12.9906 15.0509 14.9274 14.2984 15.4392 12.7732C16.0646 10.9122 14.7321 9.16389 12.4712 9.15379Z"
+                                        fill="#C31926" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <button x-cloak x-data="{scroll : false}"
+        @scroll.window="document.documentElement.scrollTop > 20 ? scroll = true : scroll = false" x-show="scroll"
+        @click="window.scrollTo({top: 0, behavior: 'smooth'})" type="button" data-mdb-ripple="true"
+        data-mdb-ripple-color="light"
+        class="fixed inline-block text-xs font-medium leading-tight text-white uppercase transition duration-150 ease-in-out  rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg bottom-16 right-5"
+        id="btn-back-to-top" x-transition.opacity>
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 54 54" fill="none">
+            <circle cx="26.6813" cy="27.3588" r="26.6412" fill="#FEFEFE" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M34.5825 27.0176L28.7531 21.1212L28.6727 38.7167C28.6717 38.9857 28.6177 39.252 28.5137 39.5002C28.4097 39.7484 28.2579 39.9736 28.0668 40.1631C27.8758 40.3526 27.6492 40.5025 27.4002 40.6044C27.1511 40.7063 26.8844 40.758 26.6153 40.7568V40.7568C26.3462 40.7555 26.0799 40.7013 25.8317 40.5971C25.5835 40.4929 25.3582 40.3409 25.1688 40.1497C24.9794 39.9585 24.8294 39.7318 24.7276 39.4826C24.6257 39.2335 24.574 38.9667 24.5752 38.6975L24.6556 21.1059L18.7688 26.9238C18.5777 27.1135 18.3511 27.2637 18.1019 27.3658C17.8528 27.4679 17.5859 27.5199 17.3167 27.5188C17.0474 27.5177 16.781 27.4636 16.5327 27.3596C16.2844 27.2555 16.059 27.1035 15.8694 26.9124V26.9124C15.487 26.5259 15.2736 26.0035 15.2761 25.4599C15.2787 24.9162 15.4968 24.3958 15.8828 24.0129L25.5455 14.4439C25.8635 14.131 26.2928 13.9573 26.7389 13.9609C27.185 13.9645 27.6115 14.1451 27.9244 14.4631L37.4934 24.1335C37.8756 24.5196 38.0889 25.0417 38.0864 25.585C38.0839 26.1284 37.8658 26.6484 37.48 27.031C37.0939 27.4133 36.5718 27.6266 36.0285 27.6241C35.4851 27.6215 34.9651 27.4034 34.5825 27.0176V27.0176Z"
+                fill="#C31926" />
+        </svg>
+    </button>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+
+        var cursor = document.querySelector('.cursor');
+        var cursorinner = document.querySelector('.cursor2');
+        var a = document.querySelectorAll('a');
+
+        document.addEventListener('mousemove', function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+        });
+
+        document.addEventListener('mousemove', function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursorinner.style.left = x + 'px';
+            cursorinner.style.top = y + 'px';
+        });
+
+        document.addEventListener('mousedown', function () {
+            cursor.classList.add('click');
+            cursorinner.classList.add('cursorinnerhover')
+        });
+
+        document.addEventListener('mouseup', function () {
+            cursor.classList.remove('click')
+            cursorinner.classList.remove('cursorinnerhover')
+        });
+
+        a.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hover');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        })
+    </script>
+
+
+
+    <script src="../../dist/alpine.js"></script>
+</body>
+
+
+</html>
