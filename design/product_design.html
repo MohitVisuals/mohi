@@ -114,15 +114,8 @@
         <!-- hero content and image section start here  -->
         <div class="flex sm:flex-row flex-col relative top-[100px] w-10/12 m-auto">
             <div class="sm:w-1/2 w-full text-white mt-16 space-y-6">
-                <h2 x-data="{ text: '', originalText: 'The goal of<br>Product design.' }" x-init="() => {
-            let index = 0;
-            setInterval(() => {
-                text = originalText.slice(0, index);
-                if (index < originalText.length) {
-                    index++;
-                }
-            }, 50);
-        }" x-html="text" class="sm:text-[50px] text-[35px] font-semibold">
+                <h2 class="sm:text-[50px] text-[35px] font-semibold">
+                    The goal of Product design.
                 </h2>
                 <p class="font-medium">is to create products that meet the needs and desires of 
                      consumers while also aligning with business objectives. It 
@@ -132,9 +125,6 @@
                          and techniques such as sketches, computer-aided design 
                           (CAD), prototyping, and testing to iterate and refine their 
                            designs.</p>
-                <button
-                    class="bg-[#DE002C] p-2 px-3 rounded-[5px] font-medium hover:bg-white hover:text-[#DE002C] transition duration-500">See
-                    My Work</button>
             </div>
             <div class="sm:w-1/2 w-full mb-28 avatar text-white">
                 <img style="filter: drop-shadow(0px 0px 67px red);" src="../asset/product-design.png" alt="">
