@@ -114,24 +114,15 @@
         <!-- hero content and image section start here  -->
         <div class="flex sm:flex-row flex-col relative top-[100px] w-10/12 m-auto">
             <div class="sm:w-1/2 w-full text-white mt-16 space-y-6">
-                <h2 x-data="{ text: '', originalText: 'The goal of<br>UI design.' }" x-init="() => {
-            let index = 0;
-            setInterval(() => {
-                text = originalText.slice(0, index);
-                if (index < originalText.length) {
-                    index++;
-                }
-            }, 50);
-        }" x-html="text" class="sm:text-[50px] text-[35px] font-semibold">
+                <h2 class="sm:text-[50px] text-[35px] font-semibold">
+                    The goal of UI design.
                 </h2>
                 <p class="font-medium">is to strike a balance between aesthetics and functionality, ensuring that
                     the interface not only looks visually pleasing  but also enables users to easily understand and
                     interact  with the product. UI designers consider various elements, including layout,
                     typography, color schemes, icons, buttons, and visual hierarchy, to create an engaging and
                     cohesive user  interface.</p>
-                <button
-                    class="bg-[#DE002C] p-2 px-3 rounded-[5px] font-medium hover:bg-white hover:text-[#DE002C] transition duration-500">See
-                    My Work</button>
+             
             </div>
             <div class="sm:w-1/2 w-full mb-28 avatar text-white">
                 <img style="filter: drop-shadow(0px 0px 67px red);" src="../asset/ui-design.png" alt="">
