@@ -114,15 +114,8 @@
         <!-- hero content and image section start here  -->
         <div class="flex sm:flex-row flex-col relative top-[100px] w-10/12 m-auto">
             <div class="sm:w-1/2 w-full text-white mt-16 space-y-6">
-                <h2 x-data="{ text: '', originalText: 'The goal of<br>UX design.' }" x-init="() => {
-            let index = 0;
-            setInterval(() => {
-                text = originalText.slice(0, index);
-                if (index < originalText.length) {
-                    index++;
-                }
-            }, 50);
-        }" x-html="text" class="sm:text-[50px] text-[35px] font-semibold">
+                <h2 class="sm:text-[50px] text-[35px] font-semibold">
+                    The goal of <br> UX design.
                 </h2>
                 <p class="font-medium">UX stands for User Experience, and it refers to the overall 
                      experience and satisfaction that a user has when 
